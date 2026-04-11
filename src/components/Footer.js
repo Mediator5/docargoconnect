@@ -1,6 +1,6 @@
 'use client';
 import { Mail, MapPin, Phone, Globe } from 'lucide-react';
-  import Image from "next/image";
+import Image from "next/image";
 
 const services = ['Air Freight', 'Ocean Freight', 'Road Freight & LTL', 'Customs Clearance', 'Warehousing', 'Specialized Cargo'];
 const company = ['About Us', 'Careers', 'Blog', 'Partners', 'Privacy Policy', 'Terms of Service'];
@@ -35,15 +35,20 @@ export default function Footer() {
             {/* Brand — full width on mobile */}
             <div className="footer-brand">
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
-              
 
-                <Image
-                  src="/logo.png"
-                  alt="D&O Cargo Connect Logo"
-                  width={60}
-                  height={60}
-                  className="object-contain"
-                />
+                <div style={{
+                  position: "relative",
+                  width: "4rem",
+                  height: "4rem"
+                }}>
+                  <Image
+                    src="/logo.png"
+                    alt="D&O Cargo Connect Logo"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
               </div>
               <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.85rem', lineHeight: 1.7, marginBottom: 18, maxWidth: 320 }}>
                 Expertly managing your supply chain from start to finish — delivering goods safely, on time, and at the best rates.

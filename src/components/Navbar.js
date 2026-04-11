@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
- import Image from "next/image";
+import Image from "next/image";
 
 const navLinks = [
   { label: 'Services', href: '#services' },
@@ -33,49 +33,62 @@ export default function Navbar() {
     }}>
       <div className="container" style={{
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        height: scrolled ? 64 : 72, transition: 'height 0.4s',
+        height: scrolled ? 100 : 100, transition: 'height 0.4s',
       }}>
 
         {/* Logo */}
         <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }}>
-         
 
-          <Image
+
+          {/* <Image
             src="/logo.png"
             alt="D&O Cargo Connect Logo"
             width={60}
             height={60}
             className="object-contain"
           />
-        </a>
+        */}
+          <div style={{
+            position: "relative",
+            width: "5rem",
+            height: "5rem"
+          }}>
+            <Image
+              src="/logo.png"
+              alt="D&O Cargo Connect Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+           </a>
+          {/* Desktop nav links */}
+          <nav className="nav-desktop">
+            {navLinks.map(l => (
+              <a key={l.href} href={l.href} className="nav-link"
+                style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.88rem', fontWeight: 600 }}>
+                {l.label}
+              </a>
+            ))}
+          </nav>
 
-        {/* Desktop nav links */}
-        <nav className="nav-desktop">
-          {navLinks.map(l => (
-            <a key={l.href} href={l.href} className="nav-link"
-              style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.88rem', fontWeight: 600 }}>
-              {l.label}
+          {/* Desktop CTA */}
+          <div className="nav-cta-desktop">
+            <a href="tel:+13464046682" style={{ display: 'flex', alignItems: 'center', gap: 5, color: 'rgba(255,255,255,0.55)', fontSize: '0.82rem' }}>
+              <Phone size={13} /> (346) 404-6682
             </a>
-          ))}
-        </nav>
+            <a href="#contact" className="btn-gold" style={{ padding: '9px 20px', fontSize: '0.8rem' }}>Get a Quote</a>
+          </div>
 
-        {/* Desktop CTA */}
-        <div className="nav-cta-desktop">
-          <a href="tel:+13464046682" style={{ display: 'flex', alignItems: 'center', gap: 5, color: 'rgba(255,255,255,0.55)', fontSize: '0.82rem' }}>
-            <Phone size={13} /> (346) 404-6682
-          </a>
-          <a href="#contact" className="btn-gold" style={{ padding: '9px 20px', fontSize: '0.8rem' }}>Get a Quote</a>
-        </div>
-
-        {/* Mobile hamburger — always visible on mobile */}
-        <button
-          className="nav-mobile-btn"
-          onClick={() => setOpen(!open)}
-          style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: 6, alignItems: 'center', justifyContent: 'center' }}
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={26} /> : <Menu size={26} />}
-        </button>
+          {/* Mobile hamburger — always visible on mobile */}
+          <button
+            className="nav-mobile-btn"
+            onClick={() => setOpen(!open)}
+            style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: 6, alignItems: 'center', justifyContent: 'center' }}
+            aria-label="Toggle menu"
+          >
+            {open ? <X size={26} /> : <Menu size={26} />}
+          </button>
       </div>
 
       {/* Mobile dropdown menu */}

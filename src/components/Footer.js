@@ -38,8 +38,8 @@ export default function Footer() {
 
                 <div style={{
                   position: "relative",
-                  width: "4rem",
-                  height: "4rem"
+                  width: "5rem",
+                  height: "5rem"
                 }}>
                   <Image
                     src="/logo.png"

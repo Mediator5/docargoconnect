@@ -139,13 +139,3 @@ body { font-family: 'Barlow', sans-serif; overflow-x: hidden; background: #fff; 
 
 .img-cover { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-/* Responsive helpers */
-@media (max-width: 768px) {
-  .hide-mobile { display: none !important; }
-  .stack-mobile { flex-direction: column !important; }
-  .full-mobile { width: 100% !important; }
-  .text-center-mobile { text-align: center !important; }
-}
-@media (min-width: 769px) {
-  .hide-desktop { display: none !important; }
-}

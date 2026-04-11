@@ -31,7 +31,7 @@ export default function Contact() {
       if (!res.ok) throw new Error(data.error || 'Something went wrong');
       router.push('/thank-you');
     } catch (err) {
-      setError(err.message || 'Failed to send. Please try again or email us directly.');
+      setError(err.message || 'Failed to send. Please try again or email us direct.');
       setLoading(false);
     }
   };

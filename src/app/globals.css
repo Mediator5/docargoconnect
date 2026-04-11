@@ -181,3 +181,56 @@ button { font-family: 'Barlow', sans-serif; }
    ═══════════════════════════════════════════════════════ */
 .text-center { text-align: center; }
 .section-header { text-align: center; margin-bottom: 56px; }
+
+/* ═══════════════════════════════════════════════════════
+   NAVBAR — force hide/show correctly
+   ═══════════════════════════════════════════════════════ */
+.nav-desktop { display: none; }
+.nav-mobile-btn { display: block; }
+@media (min-width: 1024px) {
+  .nav-desktop { display: flex; align-items: center; gap: 32px; }
+  .nav-mobile-btn { display: none; }
+}
+
+.nav-cta-desktop { display: none; }
+@media (min-width: 1024px) {
+  .nav-cta-desktop { display: flex; align-items: center; gap: 16px; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   FAQ — always stack on mobile, side-by-side on lg
+   ═══════════════════════════════════════════════════════ */
+.faq-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
+@media (min-width: 1024px) { .faq-grid { grid-template-columns: 1fr 1.4fr; gap: 64px; } }
+
+/* The sticky left column should NOT be sticky on mobile */
+.faq-sticky { position: static; }
+@media (min-width: 1024px) { .faq-sticky { position: sticky; top: 100px; } }
+
+/* Hide the FAQ image on mobile to avoid clutter */
+.faq-image { display: none; }
+@media (min-width: 1024px) { .faq-image { display: block; } }
+
+/* ═══════════════════════════════════════════════════════
+   FOOTER — single column on mobile
+   ═══════════════════════════════════════════════════════ */
+.grid-footer { display: grid; grid-template-columns: 1fr; gap: 32px; }
+@media (min-width: 640px)  { .grid-footer { grid-template-columns: 1fr 1fr; gap: 28px; } }
+@media (min-width: 1024px) { .grid-footer { grid-template-columns: 1.5fr 1fr 1fr 1.3fr; gap: 40px; } }
+
+/* Footer brand — full width on all sizes */
+.footer-brand { grid-column: 1 / -1; }
+@media (min-width: 1024px) { .footer-brand { grid-column: auto; } }
+
+/* ═══════════════════════════════════════════════════════
+   CTA STRIP — full width button on mobile
+   ═══════════════════════════════════════════════════════ */
+.cta-strip { display: flex; flex-direction: column; align-items: stretch; gap: 20px; }
+.cta-strip .btn-gold { width: 100%; justify-content: center; text-align: center; }
+@media (min-width: 640px) {
+  .cta-strip { flex-direction: row; align-items: center; justify-content: space-between; }
+  .cta-strip .btn-gold { width: auto; }
+}
+
+/* Also ensure btn-gold never overflows its container */
+.btn-gold { max-width: 100%; box-sizing: border-box; }

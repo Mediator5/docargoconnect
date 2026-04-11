@@ -1,14 +1,15 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
+ import Image from "next/image";
 
 const navLinks = [
-  { label: 'Services',   href: '#services'   },
-  { label: 'Why Us',     href: '#why-us'     },
-  { label: 'Process',    href: '#process'    },
+  { label: 'Services', href: '#services' },
+  { label: 'Why Us', href: '#why-us' },
+  { label: 'Process', href: '#process' },
   { label: 'Industries', href: '#industries' },
-  { label: 'FAQ',        href: '#faq'        },
-  { label: 'Contact',    href: '#contact'    },
+  { label: 'FAQ', href: '#faq' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 export default function Navbar() {
@@ -24,54 +25,82 @@ export default function Navbar() {
   return (
     <header style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-      background: scrolled ? 'rgba(30,10,79,0.97)' : 'transparent',
-      backdropFilter: scrolled ? 'blur(12px)' : 'none',
+      background: scrolled ? 'rgba(30,10,79,0.97)' : 'rgba(30,10,79,0.85)',
+      backdropFilter: 'blur(12px)',
       boxShadow: scrolled ? '0 2px 30px rgba(0,0,0,0.3)' : 'none',
-      borderBottom: scrolled ? '1px solid rgba(245,197,24,0.15)' : '1px solid transparent',
+      borderBottom: '1px solid rgba(245,197,24,0.12)',
       transition: 'all 0.4s ease',
     }}>
-      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: scrolled ? 64 : 76, transition: 'height 0.4s' }}>
+      <div className="container" style={{
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        height: scrolled ? 64 : 72, transition: 'height 0.4s',
+      }}>
 
         {/* Logo */}
-        <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <div style={{ width: 44, height: 44, borderRadius: '50%', background: 'linear-gradient(135deg,#F5C518,#FFD94D)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 900, fontSize: '0.85rem', color: '#1E0A4F', flexShrink: 0 }}>D&O</div>
-          <div>
-            <div style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 900, fontSize: '1.15rem', color: '#F5C518', letterSpacing: '0.04em', lineHeight: 1.1 }}>D&O</div>
-            <div style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: '0.6rem', color: '#1A8A3C', letterSpacing: '0.14em', textTransform: 'uppercase' }}>Cargo Connect</div>
-          </div>
+        <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }}>
+         
+
+          <Image
+            src="/logo.png"
+            alt="D&O Cargo Connect Logo"
+            width={60}
+            height={60}
+            className="object-contain"
+          />
         </a>
 
-        {/* Desktop nav */}
-        <nav className="desktop-only" style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
+        {/* Desktop nav links */}
+        <nav className="nav-desktop">
           {navLinks.map(l => (
-            <a key={l.href} href={l.href} className="nav-link" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.88rem', fontWeight: 600 }}>{l.label}</a>
+            <a key={l.href} href={l.href} className="nav-link"
+              style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.88rem', fontWeight: 600 }}>
+              {l.label}
+            </a>
           ))}
         </nav>
 
         {/* Desktop CTA */}
-        <div className="desktop-only" style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+        <div className="nav-cta-desktop">
           <a href="tel:+13464046682" style={{ display: 'flex', alignItems: 'center', gap: 5, color: 'rgba(255,255,255,0.55)', fontSize: '0.82rem' }}>
             <Phone size={13} /> (346) 404-6682
           </a>
           <a href="#contact" className="btn-gold" style={{ padding: '9px 20px', fontSize: '0.8rem' }}>Get a Quote</a>
         </div>
 
-        {/* Mobile hamburger */}
-        <button className="mobile-only" onClick={() => setOpen(!open)} style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: 4 }}>
-          {open ? <X size={24} /> : <Menu size={24} />}
+        {/* Mobile hamburger — always visible on mobile */}
+        <button
+          className="nav-mobile-btn"
+          onClick={() => setOpen(!open)}
+          style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: 6, alignItems: 'center', justifyContent: 'center' }}
+          aria-label="Toggle menu"
+        >
+          {open ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
 
-      {/* Mobile dropdown */}
-      <div style={{ background: '#1E0A4F', maxHeight: open ? 440 : 0, overflow: 'hidden', transition: 'max-height 0.35s ease', borderTop: open ? '1px solid rgba(245,197,24,0.15)' : 'none' }}>
-        <div style={{ padding: '12px 24px 20px', display: 'flex', flexDirection: 'column', gap: 2 }}>
+      {/* Mobile dropdown menu */}
+      <div style={{
+        background: '#1E0A4F',
+        maxHeight: open ? 480 : 0,
+        overflow: 'hidden',
+        transition: 'max-height 0.35s ease',
+        borderTop: open ? '1px solid rgba(245,197,24,0.15)' : 'none',
+      }}>
+        <div style={{ padding: '12px 24px 24px', display: 'flex', flexDirection: 'column', gap: 0 }}>
           {navLinks.map(l => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)} style={{ color: 'rgba(255,255,255,0.82)', padding: '10px 0', borderBottom: '1px solid rgba(255,255,255,0.07)', fontSize: '1rem', fontWeight: 600, display: 'block' }}>{l.label}</a>
+            <a key={l.href} href={l.href} onClick={() => setOpen(false)}
+              style={{ color: 'rgba(255,255,255,0.85)', padding: '12px 0', borderBottom: '1px solid rgba(255,255,255,0.07)', fontSize: '1.05rem', fontWeight: 600, display: 'block' }}>
+              {l.label}
+            </a>
           ))}
-          <a href="tel:+13464046682" style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'rgba(255,255,255,0.5)', padding: '10px 0', fontSize: '0.88rem' }}>
-            <Phone size={13} /> (346) 404-6682
+          <a href="tel:+13464046682"
+            style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'rgba(255,255,255,0.5)', padding: '12px 0', fontSize: '0.9rem', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+            <Phone size={14} /> (346) 404-6682
           </a>
-          <a href="#contact" className="btn-gold" style={{ marginTop: 8, justifyContent: 'center' }}>Get a Free Quote</a>
+          <a href="#contact" className="btn-gold" onClick={() => setOpen(false)}
+            style={{ marginTop: 16, justifyContent: 'center', textAlign: 'center' }}>
+            Get a Free Quote
+          </a>
         </div>
       </div>
     </header>

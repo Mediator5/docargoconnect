@@ -35,8 +35,8 @@ export default function Hero() {
               <a href="#services" className="btn-outline">Our Services</a>
             </div>
 
-            <div style={{ display: 'flex', gap: 36, flexWrap: 'wrap' }}>
-              {[['500+','Shipments Delivered'],['40+','Countries Reached'],['98%','On-Time Rate']].map(([val,lbl]) => (
+            <div style={{ display: 'none', gap: 36, flexWrap: 'wrap' }}>
+              {[['40+','Countries Reached'],].map(([val,lbl]) => (
                 <div key={lbl}>
                   <div style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 900, fontSize: '2.2rem', color: '#F5C518', lineHeight: 1 }}>{val}</div>
                   <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600, marginTop: 2 }}>{lbl}</div>

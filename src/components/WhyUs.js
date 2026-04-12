@@ -30,7 +30,7 @@ export default function WhyUs() {
           </div>
           {/* Content */}
           <div>
-            <span className="tag" style={{ background:'rgba(245,197,24,0.1)', color:'#F5C518', border:'1px solid rgba(245,197,24,0.25)' }}>Why Choose D&O</span>
+            <span className="tag2" style={{ background:'rgba(245,197,24,0.1)', color:'#F5C518', border:'1px solid rgba(245,197,24,0.25)' }}>Why Choose D&O</span>
             <h2 className="heading" style={{ fontSize:'clamp(2rem,3.5vw,3rem)', color:'white', marginBottom:16 }}>THE TRUSTED PARTNER<br/><span style={{ color:'#F5C518' }}>SMBS RELY ON</span></h2>
             <p style={{ color:'rgba(255,255,255,0.55)', fontSize:'1.05rem', lineHeight:1.7, marginBottom:36 }}>We bridge the gap between shippers and carriers with a level of personalization that industry giants simply can't match.</p>
             <div className="grid-reasons">

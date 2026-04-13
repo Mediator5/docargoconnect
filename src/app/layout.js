@@ -1,8 +1,25 @@
 import './globals.css';
 
+
+
 export const metadata = {
-  title: 'D&O Cargo Connect | Freight Forwarding & Global Logistics',
-  description: 'Personalized freight forwarding for small-to-medium businesses. Air, ocean & road freight — customs clearance, warehousing, door-to-door delivery. Houston, TX.',
+  title: "D&O Cargo Connect | Freight Forwarding & Global Logistics",
+  description: "Personalized freight forwarding for small-to-medium businesses. Air, ocean & road freight — customs clearance, warehousing, door-to-door delivery. Houston, TX.",
+  openGraph: {
+    title: "D&O Cargo Connect | Freight Forwarding & Global Logistics",
+    description: "Personalized freight forwarding for small-to-medium businesses. Air, ocean & road freight — customs clearance, warehousing, door-to-door delivery. Houston, TX.",
+    url: "http://docargoconnect.com/",
+    siteName: "D&O Cargo Connect",
+    images: [
+      {
+        url: "https://docargoconnect.com/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Preview Image",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {

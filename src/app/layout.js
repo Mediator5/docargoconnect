@@ -12,7 +12,7 @@ export const metadata = {
     siteName: "D&O Cargo Connect",
     images: [
       {
-        url: "https://docargoconnect.com/logo.png",
+        url: "https://docargoconnect.com/logo2.png",
         width: 1200,
         height: 630,
         alt: "Preview Image",

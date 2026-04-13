@@ -8,7 +8,7 @@ export const metadata = {
   openGraph: {
     title: "D&O Cargo Connect | Freight Forwarding & Global Logistics",
     description: "Personalized freight forwarding for small-to-medium businesses. Air, ocean & road freight — customs clearance, warehousing, door-to-door delivery. Houston, TX.",
-    url: "http://docargoconnect.com/",
+    url: "https://docargoconnect.com/",
     siteName: "D&O Cargo Connect",
     images: [
       {

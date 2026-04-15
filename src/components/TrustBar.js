@@ -1,5 +1,5 @@
 'use client';
-const items = ['Air Freight','Ocean Cargo','Customs Clearance','LTL Solutions','Door-to-Door Delivery','Warehousing','Road Freight','Supply Chain Management','Real-Time Tracking','Specialized Cargo'];
+const items = ['Air Freight','Ocean Cargo','Customs Clearance','LTL Solutions','Door-to-Door Delivery','Road Freight','Supply Chain Management','Real-Time Tracking','Specialized Cargo'];
 const doubled = [...items,...items];
 export default function TrustBar() {
   return (

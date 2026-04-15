@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
-  { q: 'What types of businesses do you work with?',        a: "We specialize in small-to-medium businesses (SMBs) across e-commerce, manufacturing, healthcare, agriculture, retail, and technology." },
+  { q: 'What types of businesses do you work with?',        a: "We specialize in small-to-medium businesses (SMBs) across e-commerce, manufacturing, retail, and technology." },
   { q: 'What is LTL and why is it better for my business?', a: "Less-than-Truckload (LTL) means you only pay for the portion of the truck your cargo uses — significantly reducing freight costs for SMBs that don't have full truckload volumes." },
   { q: 'How do you handle customs clearance?',             a: "We have licensed customs brokers who handle all documentation, import/export filings, duty calculations, and regulatory compliance for smooth border crossings." },
   { q: 'Do you offer real-time tracking?',                 a: "Yes. Every shipment includes real-time tracking and proactive updates. Our team is available 24/7 for status checks." },

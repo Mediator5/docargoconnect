@@ -2,7 +2,7 @@
 import { Mail, MapPin, Phone, Globe } from 'lucide-react';
 import Image from "next/image";
 
-const services = ['Air Freight', 'Ocean Freight', 'Road Freight & LTL', 'Customs Clearance', 'Warehousing', 'Specialized Cargo'];
+const services = ['Air Freight', 'Ocean Freight', 'Road Freight & LTL', 'Customs Clearance', 'Specialized Cargo'];
 const company = ['About Us', 'Careers', 'Blog', 'Partners', 'Privacy Policy', 'Terms of Service'];
 
 export default function Footer() {
@@ -89,7 +89,7 @@ export default function Footer() {
                 {[
                   { Icon: Mail, val: 'info@docargoconnect.com', href: 'mailto:info@docargoconnect.com', accent: '#F5C518' },
                   { Icon: Phone, val: '(346) 404-6682', href: 'tel:+13464046682', accent: '#1A8A3C' },
-                  { Icon: MapPin, val: '6804 Hwy 6 S Ste E #1009\nHouston, TX 77083', accent: '#F5C518' },
+                  { Icon: MapPin, val: 'U.S Head Office:\nD&O CARGO CONNECT| 13606 Magnolia\n Pkwy| Rosharon, Texas 77583 | United States.', accent: '#F5C518' },
                 ].map(item => (
                   <div key={item.val} style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
                     <item.Icon size={14} color={item.accent} style={{ marginTop: 2, flexShrink: 0 }} />

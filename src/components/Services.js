@@ -5,7 +5,7 @@ const services = [
   { icon:Ship,      title:'Ocean Freight',      accent:'#1A8A3C', desc:'FCL and LCL services for large-volume international shipments at cost-effective rates.' },
   { icon:Truck,     title:'Road Freight & LTL', accent:'#F5C518', desc:'Specialized LTL and FTL trucking across North America. Optimized loads to reduce costs for SMBs.' },
   { icon:FileText,  title:'Customs Clearance',  accent:'#1A8A3C', desc:'Expert handling of all customs documentation, duties, and compliance for smooth border crossings.' },
-  { icon:Warehouse, title:'Warehousing',        accent:'#F5C518', desc:'Flexible warehousing near major hubs. Short and long-term storage with inventory management.' },
+  // { icon:Warehouse, title:'Warehousing',        accent:'#F5C518', desc:'Flexible warehousing near major hubs. Short and long-term storage with inventory management.' },
   { icon:Package,   title:'Specialized Cargo',  accent:'#1A8A3C', desc:'Oversized, hazardous, temperature-controlled, and high-value cargo with specialized equipment.' },
 ];
 export default function Services() {

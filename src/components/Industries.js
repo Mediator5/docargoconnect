@@ -1,9 +1,9 @@
 'use client';
 const industries = [
-  { title:'E-Commerce',          emoji:'🛒', img:'https://images.unsplash.com/photo-1553413077-190dd305871c?w=500&q=80', desc:'Fast, reliable fulfillment for online retailers.' },
+  // { title:'E-Commerce',          emoji:'🛒', img:'https://images.unsplash.com/photo-1553413077-190dd305871c?w=500&q=80', desc:'Fast, reliable fulfillment for online retailers.' },
   { title:'Manufacturing',       emoji:'🏭', img:'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500&q=80', desc:'Raw material inbound and finished goods outbound.' },
-  { title:'Healthcare & Pharma', emoji:'🏥', img:'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&q=80', desc:'Temperature-controlled medical supply chain.' },
-  { title:'Agriculture',         emoji:'🌾', img:'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=500&q=80', desc:'Perishable goods from farms to global markets.' },
+  // { title:'Healthcare & Pharma', emoji:'🏥', img:'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&q=80', desc:'Temperature-controlled medical supply chain.' },
+  // { title:'Agriculture',         emoji:'🌾', img:'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=500&q=80', desc:'Perishable goods from farms to global markets.' },
   { title:'Retail & FMCG',       emoji:'🛍️', img:'https://images.unsplash.com/photo-1534723452862-4c874018d66d?w=500&q=80', desc:'High-volume consumer goods moved efficiently.' },
   { title:'Technology',          emoji:'💻', img:'https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=80', desc:'Secure handling for electronics and high-value tech.' },
 ];

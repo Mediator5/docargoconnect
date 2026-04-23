@@ -52,7 +52,9 @@ export default function Contact() {
               width: "20rem",
               height: "20rem",
               borderRadius:16,
-              overflow: "hidden"
+              overflow: "hidden",
+              display:'none'
+              
             }}>
               <Image
                 src="/logo.png"
@@ -63,9 +65,17 @@ export default function Contact() {
               />
             </div>
           </div>
-          <div style={{ background: '#F9FAFB', border: '1px solid rgba(45,15,107,0.09)', borderRadius: 20, padding: 36 }}>
-            <div className="subheading" style={{ fontSize: '1.3rem', color: '#1E0A4F', letterSpacing: '0.02em', marginBottom: 24 }}>Shipment Details</div>
-            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+          <div style={{ background: '#F9FAFB', border: '1px solid rgba(45,15,107,0.09)', borderRadius: 20, padding: 36, position: "relative", overflow: "hidden", width: "30rem",
+              height: "30rem"}}>
+            <Image
+                src="/logo.png"
+                alt="D&O Cargo Connect Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            {/* <div className="subheading" style={{ fontSize: '1.3rem', color: '#1E0A4F', letterSpacing: '0.02em', marginBottom: 24 }}>Request for a Quote</div> */}
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 14, display: 'none'}}>
               <div className="grid-inputs">
                 {[['name', 'Your Name', 'text'], ['company', 'Company', 'text']].map(([k, ph, t]) => (
                   <div key={k}><label style={{ display: 'block', fontSize: '0.68rem', fontWeight: 700, color: '#6B7280', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 5 }}>{ph}</label><input type={t} placeholder={ph} value={form[k]} onChange={e => set(k, e.target.value)} required={k === 'name'} style={inp} /></div>

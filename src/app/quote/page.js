@@ -84,40 +84,9 @@ export default function QuotePage() {
         {/* Form — same layout as contact section */}
         <section className="section" style={{ background:'#F9FAFB' }}>
           <div className="container">
-            <div className="grid-2-asym">
+            <div className="" style={{padding: '50px'}}>
 
-              {/* Left — contact info */}
-              <div>
-                <span className="tag" style={{ background:'rgba(45,15,107,0.07)', color:'#2D0F6B' }}>Get In Touch</span>
-                <h2 className="heading" style={{ fontSize:'clamp(2rem,3.5vw,3rem)', color:'#1E0A4F', marginBottom:16 }}>
-                  REQUEST YOUR<br /><span style={{ color:'#F5C518', WebkitTextStroke:'1px #D4A800' }}>FREE QUOTE</span>
-                </h2>
-                <p style={{ color:'#6B7280', fontSize:'1rem', lineHeight:1.7, marginBottom:36 }}>
-                  Tell us about your shipment and attach any relevant documents — packing lists, invoices, or customs forms. Our team will review everything and get back to you promptly.
-                </p>
-                <div style={{ display:'flex', flexDirection:'column', gap:20, marginBottom:32 }}>
-                  {[
-                    { Icon:Mail,   label:'Email Us',   val:'info@docargoconnect.com', href:'mailto:info@docargoconnect.com', accent:'#F5C518' },
-                    { Icon:Phone,  label:'Call Us',    val:'(346) 404-6682',          href:'tel:+13464046682',              accent:'#1A8A3C' },
-                    { Icon:MapPin, label:'Our Office', val:'6804 Hwy 6 S Ste E #1009\nHouston, TX 77083', accent:'#2D0F6B' },
-                  ].map(item => (
-                    <div key={item.label} style={{ display:'flex', alignItems:'flex-start', gap:14 }}>
-                      <div style={{ width:44, height:44, borderRadius:12, background:`${item.accent}18`, display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
-                        <item.Icon size={18} color={item.accent} />
-                      </div>
-                      <div>
-                        <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:'0.68rem', color:item.accent, textTransform:'uppercase', letterSpacing:'0.1em', marginBottom:3 }}>{item.label}</div>
-                        {item.href
-                          ? <a href={item.href} style={{ color:'#374151', fontSize:'0.88rem', fontWeight:500 }}>{item.val}</a>
-                          : <span style={{ color:'#374151', fontSize:'0.88rem', fontWeight:500, whiteSpace:'pre-line' }}>{item.val}</span>}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div style={{ borderRadius:16, overflow:'hidden', height:200 }}>
-                  <img src="https://images.unsplash.com/photo-1498307833015-e7b400441eb8?w=700&q=80" alt="Global routes" />
-                </div>
-              </div>
+            
 
               {/* Right — form */}
               <div style={{ background:'#fff', border:'1px solid rgba(45,15,107,0.09)', borderRadius:20, padding:36 }}>

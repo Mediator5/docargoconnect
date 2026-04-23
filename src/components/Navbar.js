@@ -4,12 +4,12 @@ import { Menu, X, Phone } from 'lucide-react';
 import Image from "next/image";
 
 const navLinks = [
-  { label: 'Services', href: '#services' },
-  { label: 'Why Us', href: '#why-us' },
-  { label: 'Process', href: '#process' },
-  { label: 'Industries', href: '#industries' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Why Us', href: '/#why-us' },
+  { label: 'Process', href: '/#process' },
+  { label: 'Industries', href: '/#industries' },
+  { label: 'FAQ', href: '/#faq' },
+  { label: 'Contact', href: '/#contact' },
 ];
 
 export default function Navbar() {

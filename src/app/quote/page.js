@@ -3,7 +3,8 @@ import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { Mail, MapPin, Phone, Send, Loader, Upload, X, FileText, File, Image } from 'lucide-react';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+
+import Footer2 from '@/components/Footer2';
 
 const ACCEPTED = ['application/pdf','application/msword','application/vnd.openxmlformats-officedocument.wordprocessingml.document','application/vnd.ms-excel','application/vnd.openxmlformats-officedocument.spreadsheetml.sheet','image/jpeg','image/png','image/webp','text/plain'];
 const MAX_MB = 10;
@@ -202,7 +203,7 @@ export default function QuotePage() {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer2 />
     </>
   );
 }

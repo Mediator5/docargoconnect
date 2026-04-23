@@ -40,7 +40,7 @@ export async function POST(request) {
         // ── Company notification email ────────────────────────
         await transporter.sendMail({
             from: `"D&O Website" <${process.env.GMAIL_USER}>`,
-            to: 'mdigital1196@gmail.com',
+            to: 'info@docargoconnect.com',
             replyTo: email,
             subject: `New Quote Request — ${service || 'General'} from ${name}${company ? ` (${company})` : ''}`,
             attachments,

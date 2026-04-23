@@ -121,7 +121,7 @@ export default function QuotePage() {
 
               {/* Right — form */}
               <div style={{ background:'#fff', border:'1px solid rgba(45,15,107,0.09)', borderRadius:20, padding:36 }}>
-                <div className="subheading" style={{ fontSize:'1.3rem', color:'#1E0A4F', letterSpacing:'0.02em', marginBottom:24 }}>Shipment Details</div>
+                <div className="subheading" style={{ fontSize:'1.3rem', color:'#1E0A4F', letterSpacing:'0.02em', marginBottom:24 }}>Request for a Quote</div>
 
                 <form onSubmit={handleSubmit} style={{ display:'flex', flexDirection:'column', gap:14 }}>
 

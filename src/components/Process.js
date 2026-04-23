@@ -33,7 +33,7 @@ export default function Process() {
             <div className="subheading" style={{ fontSize:'1.5rem', color:'white', marginBottom:4 }}>Ready to Ship?</div>
             <div style={{ color:'rgba(255,255,255,0.5)', fontSize:'0.9rem' }}>Get your personalized freight quote in under 2 hours.</div>
           </div>
-          <a href="#contact" className="btn-gold">Start Your Shipment →</a>
+          <a href="/quote" className="btn-gold">Start Your Shipment →</a>
         </div>
       </div>
     </section>

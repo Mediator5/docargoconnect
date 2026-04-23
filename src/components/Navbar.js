@@ -37,7 +37,7 @@ export default function Navbar() {
       }}>
 
         {/* Logo */}
-        <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }}>
+        <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }}>
 
 
           {/* <Image
@@ -77,7 +77,7 @@ export default function Navbar() {
             <a href="tel:+13464046682" style={{ display: 'flex', alignItems: 'center', gap: 5, color: 'rgba(255,255,255,0.55)', fontSize: '0.82rem' }}>
               <Phone size={13} /> (346) 404-6682
             </a>
-            <a href="#contact" className="btn-gold" style={{ padding: '9px 20px', fontSize: '0.8rem' }}>Get a Quote</a>
+            <a href="/quote" className="btn-gold" style={{ padding: '9px 20px', fontSize: '0.8rem' }}>Get a Quote</a>
           </div>
 
           {/* Mobile hamburger — always visible on mobile */}
@@ -110,7 +110,7 @@ export default function Navbar() {
             style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'rgba(255,255,255,0.5)', padding: '12px 0', fontSize: '0.9rem', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
             <Phone size={14} /> (346) 404-6682
           </a>
-          <a href="#contact" className="btn-gold" onClick={() => setOpen(false)}
+          <a href="/quote" className="btn-gold" onClick={() => setOpen(false)}
             style={{ marginTop: 16, justifyContent: 'center', textAlign: 'center' }}>
             Get a Free Quote
           </a>

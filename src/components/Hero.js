@@ -31,7 +31,7 @@ export default function Hero() {
             </p>
 
             <div className="fade4" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 48 }}>
-              <a href="#contact" className="btn-gold">Get a Free Quote <ArrowRight size={15} /></a>
+              <a href="/quote" className="btn-gold">Get a Free Quote <ArrowRight size={15} /></a>
               <a href="#services" className="btn-outline">Our Services</a>
             </div>
 

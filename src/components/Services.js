@@ -32,7 +32,7 @@ export default function Services() {
           })}
         </div>
         <div style={{ textAlign:'center', marginTop:48 }}>
-          <a href="#contact" className="btn-gold">Get a Custom Quote <ArrowRight size={15} /></a>
+          <a href="/quote" className="btn-gold">Get a Custom Quote <ArrowRight size={15} /></a>
         </div>
       </div>
     </section>

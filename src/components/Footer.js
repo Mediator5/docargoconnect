@@ -22,7 +22,7 @@ export default function Footer() {
                 Get a personalized quote in under 2 hours.
               </div>
             </div>
-            <a href="#contact" className="btn-gold">Get a Free Quote →</a>
+            <a href="/quote" className="btn-gold">Get a Free Quote →</a>
           </div>
         </div>
       </div>
